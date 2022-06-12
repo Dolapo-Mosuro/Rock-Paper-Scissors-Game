@@ -17,7 +17,7 @@ while True:
                 print("Computer selected: " +  computer_select)
                 print("You lose!")
 
-            if computer_select == "scissors":
+            if computer_select == "paper":
                 print("You selected: " +user_select)
                 print("Computer selected: " +  computer_select)
                 print("You win!")
