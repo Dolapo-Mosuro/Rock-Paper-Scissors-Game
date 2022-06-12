@@ -1,54 +1,48 @@
 import random
-
+    
 while True:
+    user_select= input("Pick an option- 'rock' 'paper' 'scissors'?: \n")
+    game= ["rock","paper","scissors"]
+    computer_select = random.choice(game)
 
-    Game = ["rock","paper","scissors"]
 
-    Player = None
-    CPU = random.choice(Game)
-
-    while Player not in Game:
-            Player = input("Pick an option- 'r' 'p' 's'?: ").lower()
-
-    if Player == CPU:
-            print("You selected: " + Player)
-            print("You selected: " +  CPU)
+    if user_select == computer_select:
+            print("You selected: " + user_select)
+            print("Computer selected: " +  computer_select)
             print("Tie!")
 
-    elif Player == "rock":
-            if  CPU == "paper":
-                print("You selected: " + Player)
-                print("You selected: " +  CPU)
+    elif user_select == "rock":
+            if  computer_select == "scissors":
+                print("You selected: " + user_select)
+                print("Computer selected: " +  computer_select)
                 print("You lose!")
 
-            if CPU == "scissors":
-                print("You selected: " +Player)
-                print("You selected: " +  CPU)
+            if computer_select == "scissors":
+                print("You selected: " +user_select)
+                print("Computer selected: " +  computer_select)
                 print("You win!")
 
-    elif Player == "scissors":
-            if  CPU == "rock":
-                print("You selected: " + Player)
-                print("You selected: " +  CPU)
+    elif user_select == "scissors":
+            if  computer_select == "rock":
+                print("You selected: " +user_select)
+                print("Computer selected: " +  computer_select)
                 print("You lose!")
 
-            if  CPU == "paper":
-                print("You selected: " + Player)
-                print("You selected: " +  CPU )
+            if  computer_select == "paper":
+                print("You selected: " + user_select)
+                print("Computer: " +  computer_select )
                 print("You win!")
-    elif Player == "paper":
-            if CPU == "scissors":
-                print("You selected: " + Player)
-                print("You selected: " +)
+    elif user_select == "paper":
+            if computer_select == "scissors":
+                print("You selected: " + user_select)
+                print("Computer selected: " +computer_select)
                 print("You lose!")
 
-            if CPU == "rock":
-                print("You selected: " + Player)
-                print("You selected: " + CPU)
+            if computer_select== "rock":
+                print("You selected: " + user_select)
+                print("Computer selected: " + computer_select)
                 print("You win!")
-
-    replay = input("Play again? (yes/no): ").lower()
-    if replay != "yes":
-            break
-    print(" That was fun. Goodbye.")
-
+   
+    play_again = input("Play again? (y/n): \n")
+    if play_again.lower() != "y":
+        break
